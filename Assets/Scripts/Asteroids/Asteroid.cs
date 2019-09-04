@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class Asteroid : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private float _speed;
+    public float Speed
+    {
+        get { return _speed; }
+        set { _speed = value; }
+    }
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        MoveDownLinear();
+    }
+
+    private void MoveDownLinear()
+    {
+        transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, transform.position.y -transform.up.y, Time.deltaTime * _speed), 0);
     }
 }
