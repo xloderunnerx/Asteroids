@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour
 
     private void MoveHorizontal()
     {
+        
+
         _rigidbody2D.velocity = new Vector2(Input.GetAxis("Horizontal") * _horizontalSpeed, _rigidbody2D.velocity.y);
     }
+
 }

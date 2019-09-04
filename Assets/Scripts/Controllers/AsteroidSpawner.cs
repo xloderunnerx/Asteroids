@@ -60,23 +60,27 @@ public class AsteroidSpawner : MonoBehaviour
         GameObject asteroid = new GameObject("Asteroid");
         asteroid.transform.position = position;
 
+        int randomVerticesCount = UnityEngine.Random.Range(_verticesCount / 2, _verticesCount * 2);
+        float randomSize = UnityEngine.Random.Range(_size / 2, _size * 2);
+
         LineRenderer lr = asteroid.AddComponent<LineRenderer>();
         lr.useWorldSpace = false;
         lr.loop = true;
-        lr.positionCount = _verticesCount;
+        lr.positionCount = randomVerticesCount;
         lr.widthMultiplier = _borderSize;
         lr.numCornerVertices = 0;
         lr.numCapVertices = 0;
         lr.material = _asteroidBorder;
 
         Asteroid a = asteroid.AddComponent<Asteroid>();
-        a.Speed = _speed;
+        a.Speed = UnityEngine.Random.Range(_speed/2, _speed * 2);
+        a.Size = randomSize;
 
-        for (int i = 0; i < _verticesCount; i++)
+        for (int i = 0; i < randomVerticesCount; i++)
         {
             float rnd = UnityEngine.Random.Range(1.0f, 2.0f);
-            var rad = Mathf.Deg2Rad * (i * 360f / _verticesCount);
-            lr.SetPosition(i, new Vector3(Mathf.Sin(rad) * _size * rnd, Mathf.Cos(rad) * _size * rnd, 0));
+            var rad = Mathf.Deg2Rad * (i * 360f / randomVerticesCount);
+            lr.SetPosition(i, new Vector3(Mathf.Sin(rad) * randomSize * rnd, Mathf.Cos(rad) * randomSize * rnd, 0));
         }
 
         GenerateMesh(asteroid);

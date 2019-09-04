@@ -11,7 +11,7 @@ public class ScreenEdgeCollider : MonoBehaviour
     void Start()
     {
         _edges = new List<EdgeCollider2D>();
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 3; i++)
         {
             gameObject.AddComponent<EdgeCollider2D>();
         }
@@ -32,7 +32,7 @@ public class ScreenEdgeCollider : MonoBehaviour
         edgeColliders[0].points = new Vector2[] { delta + GetWorldViewPort(new Vector2(0, 0)), delta + GetWorldViewPort(new Vector2(0, 1)) };
         edgeColliders[1].points = new Vector2[] { delta + GetWorldViewPort(new Vector2(0, 1)), delta + GetWorldViewPort(new Vector2(1, 1)) };
         edgeColliders[2].points = new Vector2[] { delta + GetWorldViewPort(new Vector2(1, 1)), delta + GetWorldViewPort(new Vector2(1, 0)) };
-        edgeColliders[3].points = new Vector2[] { delta + GetWorldViewPort(new Vector2(1, 0)), delta + GetWorldViewPort(new Vector2(0, 0)) };
+        //edgeColliders[3].points = new Vector2[] { delta + GetWorldViewPort(new Vector2(1, 0)), delta + GetWorldViewPort(new Vector2(0, 0)) };
         _edges.Clear();
         _edges = edgeColliders;
     }
