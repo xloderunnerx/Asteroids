@@ -398,6 +398,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1681666891}
+  - component: {fileID: 1681666892}
   m_Layer: 0
   m_Name: Controllers
   m_TagString: Untagged
@@ -420,3 +421,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1681666892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681666890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c53739de63e184587c393300cfa405, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _asteroidBorder: {fileID: 2100000, guid: 3dde0d8c8de92474d8ef879c59aa0ce3, type: 2}
+  _asteroidFill: {fileID: 2100000, guid: 6f5f710594f7226439fd2c439b715dd9, type: 2}
