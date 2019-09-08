@@ -20,6 +20,7 @@ public class Asteroid : Enemy, IDamageSetable
 
     void Start()
     {
+        _score = (int)(_speed * 2);
         _hp = 0;
     }
     
@@ -36,6 +37,7 @@ public class Asteroid : Enemy, IDamageSetable
 
     public override void Die()
     {
+        AddScore(_score);
         Destroy(gameObject);
     }
 

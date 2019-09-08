@@ -18,6 +18,7 @@ public class GammaShip : Ship, IDamageSetable
 
     public override void Die()
     {
+        AddScore(_score);
         Destroy(gameObject);
     }
 
