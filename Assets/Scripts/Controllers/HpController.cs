@@ -15,7 +15,9 @@ public class HpController : MonoBehaviour
         get { return _hp; }
         set
         {
-            _hp = value;
+            if (value > 0)
+                _hp = value;
+            else _hp = 0;
             _hpText.text = "HP: " + _hp.ToString();
         }
     }

@@ -73,7 +73,7 @@ public class AsteroidSpawner : MonoBehaviour
         lr.material = _asteroidBorder;
 
         Asteroid a = asteroid.AddComponent<Asteroid>();
-        a.Speed = UnityEngine.Random.Range(_speed/2, _speed * 2);
+        a.Speed = UnityEngine.Random.Range(_speed / 2, _speed * 2);
         a.Size = randomSize;
 
         for (int i = 0; i < randomVerticesCount; i++)
@@ -107,7 +107,7 @@ public class AsteroidSpawner : MonoBehaviour
         MeshRenderer meshRenderer = asteroid.AddComponent<MeshRenderer>();
         meshRenderer.sharedMaterial = _asteroidFill;
 
-        MeshFilter meshFilter= asteroid.AddComponent<MeshFilter>();
+        MeshFilter meshFilter = asteroid.AddComponent<MeshFilter>();
         meshFilter.mesh = mesh;
 
         PolygonCollider2D polygonCollider2D = asteroid.AddComponent<PolygonCollider2D>();
@@ -120,7 +120,7 @@ public class AsteroidSpawner : MonoBehaviour
     private bool SpawnTimer()
     {
         _spawnRationCounter -= Time.deltaTime;
-        if(_spawnRationCounter <= 0)
+        if (_spawnRationCounter <= 0)
         {
             _spawnRationCounter = _spawnRatio;
             return true;
@@ -128,7 +128,11 @@ public class AsteroidSpawner : MonoBehaviour
         return false;
     }
 
-    private Vector2 GetRandomPositionAboveScreen() => Camera.main.ScreenToWorldPoint(new Vector2(UnityEngine.Random.Range(0, Screen.width), Screen.height + 100));
+    private Vector2 GetRandomPositionAboveScreen() => Camera.main.transform.position - transform.position + GetWorldViewPort(new Vector2(UnityEngine.Random.Range(0.0f, 1.0f), 1 + 0.1f));
+
+    Vector3 GetWorldViewPort(Vector2 normalizedPos) => Camera.main.ViewportToWorldPoint(new Vector3(normalizedPos.x, normalizedPos.y, Camera.main.nearClipPlane));
+
+
 
 
 }

@@ -40,6 +40,8 @@ public class EnemyShipsSpawner : MonoBehaviour
         return false;
     }
 
-    private Vector2 GetRandomPositionAboveScreen() => Camera.main.ScreenToWorldPoint(new Vector2(UnityEngine.Random.Range(0, Screen.width), Screen.height + 100));
+    private Vector2 GetRandomPositionAboveScreen() => Camera.main.transform.position - transform.position + GetWorldViewPort(new Vector2(UnityEngine.Random.Range(0.0f, 1.0f), 1 + 0.1f));
+
+    Vector3 GetWorldViewPort(Vector2 normalizedPos) => Camera.main.ViewportToWorldPoint(new Vector3(normalizedPos.x, normalizedPos.y, Camera.main.nearClipPlane));
 
 }
