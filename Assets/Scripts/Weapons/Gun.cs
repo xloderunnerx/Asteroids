@@ -6,6 +6,7 @@ public class Gun : Weapon
 {
     [SerializeField] private GameObject _bullet;
     [SerializeField] private float _bulletForce;
+    [SerializeField] private float _shootOffset;
 
     void Start()
     {
@@ -26,7 +27,7 @@ public class Gun : Weapon
         if (_bullet == null)
             return;
 
-        GameObject bullet = Instantiate(_bullet, transform.position, transform.rotation);
+        GameObject bullet = Instantiate(_bullet, transform.position + transform.up * _shootOffset, transform.rotation);
         bullet.GetComponent<Rigidbody2D>().AddForce(bullet.transform.up * _bulletForce, ForceMode2D.Impulse);
 
         _isReloading = true;

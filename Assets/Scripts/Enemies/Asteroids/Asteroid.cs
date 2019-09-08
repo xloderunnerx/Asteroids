@@ -39,11 +39,11 @@ public class Asteroid : Enemy, IDamageSetable
         Destroy(gameObject);
     }
 
-    public void OffScreenDestroy()
+    /*public void OffScreenDestroy()
     {
         if (transform.position.y + _size < Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)).y)
             Destroy(gameObject);
-    }
+    }*/
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

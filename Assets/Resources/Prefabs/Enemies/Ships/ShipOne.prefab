@@ -94,10 +94,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fireRate: 2
-  _fireRateCounter: 0
-  _isReloading: 0
   _bullet: {fileID: 2658712687102489463, guid: 1de44183a65d48a41b8c2e9a1163efa2, type: 3}
   _bulletForce: 2
+  _shootOffset: 0.3
 --- !u!1 &5835552851685079930
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,11 +190,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c5c803a96c60ac499d49d2ee215fbb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fireRate: 1
-  _fireRateCounter: 0
-  _isReloading: 0
+  _fireRate: 3
   _bullet: {fileID: 2658712687102489463, guid: 1de44183a65d48a41b8c2e9a1163efa2, type: 3}
   _bulletForce: 2
+  _shootOffset: 0.3
 --- !u!1 &5835552851805548083
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,11 +382,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c5c803a96c60ac499d49d2ee215fbb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fireRate: 3
-  _fireRateCounter: 0
-  _isReloading: 0
+  _fireRate: 1
   _bullet: {fileID: 2658712687102489463, guid: 1de44183a65d48a41b8c2e9a1163efa2, type: 3}
   _bulletForce: 2
+  _shootOffset: 0.3
 --- !u!1 &5835552852452756898
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2029262974906491642}
   - component: {fileID: 2029262974906491641}
+  - component: {fileID: 7738953848892600098}
   m_Layer: 0
   m_Name: GunTwo
   m_TagString: Untagged
@@ -80,6 +81,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7738953848892600098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029262974906491640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c5c803a96c60ac499d49d2ee215fbb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fireRate: 2
+  _bullet: {fileID: 2658712687102489463, guid: 1de44183a65d48a41b8c2e9a1163efa2, type: 3}
+  _bulletForce: 2
+  _shootOffset: 0.3
 --- !u!1 &2029262975232545889
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2029262975232545890}
   - component: {fileID: 2029262975232545891}
+  - component: {fileID: 6373064502390514572}
   m_Layer: 0
   m_Name: GunOne
   m_TagString: Untagged
@@ -160,6 +178,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6373064502390514572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029262975232545889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c5c803a96c60ac499d49d2ee215fbb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fireRate: 1.5
+  _bullet: {fileID: 2658712687102489463, guid: 1de44183a65d48a41b8c2e9a1163efa2, type: 3}
+  _bulletForce: 2
+  _shootOffset: 0.3
 --- !u!1 &2029262975394996818
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,6 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2029262975394996820}
   - component: {fileID: 2029262975394996819}
+  - component: {fileID: 8741863318371892797}
   m_Layer: 0
   m_Name: GunTowerOne
   m_TagString: Untagged
@@ -241,6 +276,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8741863318371892797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029262975394996818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b5a4a8382b7454e83e2b12a33eca5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rotationSpeed: 5
 --- !u!1 &2029262975827183965
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,6 +300,7 @@ GameObject:
   - component: {fileID: 2029262975827183967}
   - component: {fileID: 2029262975827183966}
   - component: {fileID: 8029390712598008138}
+  - component: {fileID: 4663583134038986625}
   m_Layer: 0
   m_Name: ShipThree
   m_TagString: Untagged
@@ -350,6 +399,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &4663583134038986625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029262975827183965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ef0616c44aab546a9970db8219a7e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hp: 30
+  _weapons:
+  - {fileID: 6373064502390514572}
+  - {fileID: 7738953848892600098}
+  _speed: 1.5
 --- !u!1 &2029262976277241396
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,6 +506,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2029262976299135558}
   - component: {fileID: 2029262976299135557}
+  - component: {fileID: 6697670171074130359}
   m_Layer: 0
   m_Name: ShipTowerTwo
   m_TagString: Untagged
@@ -511,3 +578,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6697670171074130359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029262976299135556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b5a4a8382b7454e83e2b12a33eca5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rotationSpeed: 5

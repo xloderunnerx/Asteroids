@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AlphaShip : Ship, IDamageSetable
+public class BetaShip : Ship, IDamageSetable
 {
- 
-
     void Start()
     {
-        
+
     }
 
     void Update()
@@ -29,5 +27,4 @@ public class AlphaShip : Ship, IDamageSetable
         if (_hp <= 0)
             Die();
     }
-
 }

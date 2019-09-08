@@ -5,8 +5,8 @@ using UnityEngine;
 public abstract class Weapon : MonoBehaviour
 {
     [SerializeField] protected float _fireRate;
-    [SerializeField] protected float _fireRateCounter;
-    [SerializeField] protected bool _isReloading;
+    protected float _fireRateCounter;
+    protected bool _isReloading;
 
     public abstract void Shoot();
 

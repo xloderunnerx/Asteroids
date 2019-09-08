@@ -17,4 +17,10 @@ public abstract class Enemy : MonoBehaviour
     }
 
     public abstract void Die();
+
+    public void OffScreenDestroy()
+    {
+        if (transform.position.y + GetComponent<Renderer>().bounds.size.y < Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)).y)
+            Destroy(gameObject);
+    }
 }

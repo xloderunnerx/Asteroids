@@ -5462,4 +5462,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyShips: []
-  _spawnRatio: 0.5
+  _spawnRatio: 3
