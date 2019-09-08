@@ -4,20 +4,20 @@ using UnityEngine;
 
 public abstract class Weapon : MonoBehaviour
 {
-    [SerializeField]protected float _fireRate;
-    protected float _fireRateCounter;
-    protected bool _isReloading;
+    [SerializeField] protected float _fireRate;
+    [SerializeField] protected float _fireRateCounter;
+    [SerializeField] protected bool _isReloading;
 
     public abstract void Shoot();
 
     void Start()
     {
-        
+
     }
 
     void Update()
     {
-        
+
     }
 
     public void ReloadingTimer()
@@ -26,7 +26,7 @@ public abstract class Weapon : MonoBehaviour
             return;
 
         _fireRateCounter -= Time.deltaTime;
-        if(_fireRateCounter <= 0)
+        if (_fireRateCounter <= 0)
         {
             _fireRateCounter = _fireRate;
             _isReloading = false;

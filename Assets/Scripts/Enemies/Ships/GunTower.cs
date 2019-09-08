@@ -1,22 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using System.Linq;
 
-public class Rocket : MonoBehaviour
+public class GunTower : MonoBehaviour
 {
-    [SerializeField] public GameObject _target;
-    [SerializeField] protected float _movementSpeed;
-    [SerializeField] protected float _rotationSpeed;
-    [SerializeField] protected int _damage;
+    private GameObject _target;
+    [SerializeField] private float _rotationSpeed;
 
     void Start()
     {
-        
+        if (Player.GetInstance() == null)
+            return;
+        _target = Player.GetInstance().gameObject;
     }
 
     void Update()
     {
-        
+        RotateOnTarget();
+    }
+
+   
+
+    private void RotateOnTarget()
+    {
+        if (_target == null)
+            return;
+
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, FindTargetAngle() - 90), Time.deltaTime * _rotationSpeed);
     }
 
     public float FindTargetAngle()

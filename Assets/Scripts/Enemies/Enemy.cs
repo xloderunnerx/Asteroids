@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
+    [SerializeField] protected int _hp;
+
     void Start()
     {
         
@@ -14,5 +16,5 @@ public abstract class Enemy : MonoBehaviour
         
     }
 
-    public abstract void Destroy();
+    public abstract void Die();
 }

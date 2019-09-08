@@ -395,6 +395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weapon: {fileID: 1673983725}
+  _hp: 100
 --- !u!1 &1350037898
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,7 +422,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350037898}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.218, z: 0}
+  m_LocalPosition: {x: 0, y: -0.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1486417708}
@@ -445,7 +446,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6e9cde7e31382a84ea9fbad6a10de4da, type: 2}
+  - {fileID: 2100000, guid: 883c4df43827a7341ab55ac10e13feaa, type: 2}
   - {fileID: 2100000, guid: 6e9cde7e31382a84ea9fbad6a10de4da, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -5405,6 +5406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1681666891}
   - component: {fileID: 1681666892}
+  - component: {fileID: 1681666893}
   m_Layer: 0
   m_Name: Controllers
   m_TagString: Untagged
@@ -5447,3 +5449,17 @@ MonoBehaviour:
   _verticesCount: 6
   _speed: 1
   _randomizeValues: 1
+--- !u!114 &1681666893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681666890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3f4f7887c0dd9343b8877f5a9eb97aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyShips: []
+  _spawnRatio: 0.5

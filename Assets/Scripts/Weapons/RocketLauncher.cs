@@ -70,4 +70,6 @@ public class RocketLauncher : Weapon
         _cosmeticLaserSight.SetPosition(0, transform.position);
         _cosmeticLaserSight.SetPosition(1, new Vector3(transform.position.x, laserWorldLength));
     }
+
+
 }

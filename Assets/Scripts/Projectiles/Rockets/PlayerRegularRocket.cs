@@ -8,11 +8,11 @@ public class PlayerRegularRocket : Rocket
 {
     private Rigidbody2D _rigidbody2D;
 
-    [SerializeField] private ParticleSystem _explosionCloud;
     [SerializeField] private ParticleSystem _explosionProjectiles;
 
     void Start()
     {
+        Destroy(gameObject, 10.0f);
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
@@ -57,8 +57,7 @@ public class PlayerRegularRocket : Rocket
         if (collision.GetComponent<Enemy>() == null)
             return;
 
-        _explosionCloud.Emit(10);
-        _explosionProjectiles.Emit(5);
+        _explosionProjectiles.Emit(UnityEngine.Random.Range(2, 5));
 
         for(int i = 0; i < transform.childCount; i++)
         {
@@ -66,7 +65,7 @@ public class PlayerRegularRocket : Rocket
         }
         transform.DetachChildren();
 
-        collision.gameObject.GetComponent<Enemy>().Destroy();
+        collision.gameObject.GetComponent<IDamageSetable>().SetDamage(_damage);
         Destroy(gameObject);
     }
 
